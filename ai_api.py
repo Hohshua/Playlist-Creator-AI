@@ -43,7 +43,7 @@ def parsePlaylist(playlist):
     playlist_name = lines[0].split(': ')[1]
 
     # Extract the playlist description
-    description = lines[2]
+    description = lines[2].replace('Description: ', '')
 
     # Extract the song titles and artist names
     song_title_list = []
