@@ -12,6 +12,10 @@
           <label for="song">{{ form.song.label }}</label>
           {{ form.song(class="form-control", size=32) }}
         </div>
+        <div class="form-group">
+          <label for="number_of_songs">{{ form.number_of_songs.label }}</label>
+          {{ form.number_of_songs(class="form-control", size=32) }}
+        </div>        
         {{ form.submit(class="btn btn-secondary") }}
     </form>
 </div>

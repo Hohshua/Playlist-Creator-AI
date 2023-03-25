@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <img src="{{ playlist_pic }}" alt="Playlist Picture">
+            <h1 for="playlist_name">{{ playlist_name }}</h1>
+            <h5 for="description">{{ description }}</h5>
+            {% for song in song_list %}
+                <p for="song_list">
+                    {{ song }}
+                </p>
+            {% endfor %}
+            <p for="dalle_prompt">{{ dalle_prompt }}</p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
