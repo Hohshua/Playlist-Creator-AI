@@ -6,15 +6,25 @@
     <form method="POST">
         {{ form.hidden_tag() }}
         <div class="form-group">
-            <img src="{{ playlist_pic }}" alt="Playlist Picture">
-            <h1 for="playlist_name">{{ playlist_name }}</h1>
-            <h5 for="description">{{ description }}</h5>
-            {% for song in song_list %}
-                <p for="song_list">
-                    {{ song }}
-                </p>
-            {% endfor %}
-            <p for="dalle_prompt">{{ dalle_prompt }}</p>
+            <div class="media">
+                <img src="{{ playlist_pic }}" class="rounded float-left mr-3" alt="Playlist Picture">
+                <div class="media-body">
+                  <h5 class="mt-0">{{ playlist_name }}</h5>
+                  {{ description }}
+                  {% for i in range(song_title_list|length) %}
+                    <a href="#" class="list-group-item rounded">
+                        <h4 class="list-group-item-heading">{{ song_title_list[i]  }}</h4>
+                        <p class="list-group-item-text">{{ artist_list[i] }}</p>
+                    </a>
+                  {% endfor %}
+
+                  <!-- {% for song in song_list %}
+                  <p for="song_list">
+                      {{ song }}
+                  </p>
+                  {% endfor %} -->
+                </div>
+              </div>
         </div>
     </form>
 </div>

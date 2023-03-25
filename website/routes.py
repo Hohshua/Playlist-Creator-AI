@@ -18,6 +18,6 @@ def index():
         playlist_pic = generateImage(playlist_dict['dalle_prompt'])
         return render_template('playlist.html', form=form, playlist_name=playlist_dict['playlist_name'],
                                description=playlist_dict['description'],
-                               song_list=playlist_dict['song_list'],
-                               dalle_prompt=playlist_dict['dalle_prompt'],
+                               song_title_list=playlist_dict['song_title_list'],
+                               artist_list=playlist_dict['artist_list'],
                                playlist_pic=playlist_pic)
