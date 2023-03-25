@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label for="artist">{{ form.artist.label }}</label>
+          {{ form.artist(class="form-control", size=32) }}
+        </div>
+        <div class="form-group">
+          <label for="song">{{ form.song.label }}</label>
+          {{ form.song(class="form-control", size=32) }}
+        </div>
+        {{ form.submit(class="btn btn-secondary") }}
+    </form>
+</div>
+{% endblock %}
